@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "kind": "kapitsa-bench",
+  "mode": "full",
+  "time_utc": "2026-10-22T02:13:55Z",
+  "kapitsa": {
+    "version": "0.2.4",
+    "commit": "fbab1b5"
+  },
+  "mac": {
+    "identifier": "Mac16,7",
+    "name": "MacBook Pro (16-inch, 2024)",
+    "year": 2024,
+    "chip": "Apple M4 Pro",
+    "cpu_cores": 14,
+    "gpu_cores": 20,
+    "memory_gb": 48,
+    "macos": "27.0.1",
+    "macos_build": "26A434"
+  },
+  "model": {
+    "name": "qwen3.6-35b-a3b",
+    "title": "Qwen3.6-35B-A3B",
+    "variant": "4bit",
+    "precision": "4-bit",
+    "catalog": true,
+    "revision": "9546051",
+    "decoding": "unknown",
+    "decoding_detail": "KFlash speculative decoding (DFlash2 lattice, tree verify)",
+    "drafter": null
+  },
+  "protocol": {
+    "corpus_sha256": "1a9bb103b3f6d39ee5b9f5bf7207e304c5ce92788c273685f597508c7d2bde28",
+    "decode_tokens": 512,
+    "decode_runs": 5,
+    "greedy_runs": 5,
+    "sizes": [
+      4000,
+      16000
+    ]
+  },
+  "results": {
+    "decode": {
+      "median_tps": 167.63,
+      "runs_tps": [
+        159.0,
+        167.76,
+        175.04,
+        167.63,
+        151.54
+      ]
+    },
+    "decode_greedy": {
+      "median_tps": 178.97,
+      "runs_tps": [
+        169.44,
+        181.22,
+        178.97,
+        179.99,
+        167.05
+      ]
+    },
+    "prefill": [
+      {
+        "size": 4000,
+        "prompt_tokens": 4131,
+        "ttft_s": 3.547,
+        "tps": 1164.6,
+        "followup_s": [
+          0.0649,
+          0.0717,
+          0.0577
+        ],
+        "followup_median_s": 0.0649
+      },
+      {
+        "size": 16000,
+        "prompt_tokens": 16286,
+        "ttft_s": 16.587,
+        "tps": 981.9,
+        "followup_s": [
+          0.0786,
+          0.0873,
+          0.0762
+        ],
+        "followup_median_s": 0.0786
+      }
+    ],
+    "tool_calls": "pass",
+    "peak_memory_gb": 20.9
+  },
+  "conditions": {
+    "power_source": "battery",
+    "power_mode": "high",
+    "low_power_mode": false,
+    "thermal_state": "nominal",
+    "swapouts": 0,
+    "gpu_quiet_wait_s": 18.1,
+    "gpu_other_mean_pct": 0.0,
+    "gpu_other_max_pct": 0.0,
+    "gpu_ambient_mean_pct": 0.2,
+    "gpu_users": [],
+    "contention": []
+  },
+  "flags": [
+    "power: on battery (a Mac on battery may run slower)"
+  ],
+  "invalid": []
+}
